@@ -12,8 +12,8 @@ extension AsyncValueUI on AsyncValue<void> {
   void showSnackBarOnError(BuildContext context) => whenOrNull(
         error: (error, _) {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text(error.toString()),
+            const SnackBar(
+              content: Text('An unexpected error occurs!'),
               backgroundColor: AppColors.kRedIndicatorColor,
             ),
           );
